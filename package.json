@@ -5,6 +5,7 @@
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "bin": {
+    "firefly-iii-mcp": "./build/index.js",
     "firefly-iii": "./build/index.js"
   },
   "files": [
