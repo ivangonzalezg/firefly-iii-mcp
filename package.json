@@ -15,7 +15,10 @@
     "lint": "tsc --noEmit",
     "prepublishOnly": "npm run build",
     "test": "npm run build && node --test tests",
-    "verify": "npm run lint && npm test"
+    "verify": "npm run lint && npm test",
+    "release:patch": "npm run release -- patch",
+    "release:minor": "npm run release -- minor",
+    "release:major": "npm run release -- major"
   },
   "keywords": [
     "mcp",
