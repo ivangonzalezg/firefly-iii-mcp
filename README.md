@@ -93,5 +93,5 @@ documented in [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 ## Support
 
 Questions, feature ideas, or bug reports are welcome on the
-[issue tracker](https://github.com/ivangonzalez/firefly-iii-mcp/issues) or via
+[issue tracker](https://github.com/ivangonzalezg/firefly-iii-mcp/issues) or via
 email at [contacto@ivangonzalez.co](mailto:contacto@ivangonzalez.co).

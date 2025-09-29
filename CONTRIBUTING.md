@@ -71,5 +71,5 @@ is configured under the repository secrets with publish access on npm.
 ## Communication
 
 Questions or discussions are welcome via
-[GitHub issues](https://github.com/ivangonzalez/firefly-iii-mcp/issues) or by
+[GitHub issues](https://github.com/ivangonzalezg/firefly-iii-mcp/issues) or by
 email at [contacto@ivangonzalez.co](mailto:contacto@ivangonzalez.co).

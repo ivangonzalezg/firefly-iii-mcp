@@ -51,16 +51,16 @@
   "description": "Model Context Protocol server for Firefly III's personal finance API.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ivangonzalez/firefly-iii-mcp.git"
+    "url": "https://github.com/ivangonzalezg/firefly-iii-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/ivangonzalez/firefly-iii-mcp/issues",
+    "url": "https://github.com/ivangonzalezg/firefly-iii-mcp/issues",
     "email": "contacto@ivangonzalez.co"
   },
-  "homepage": "https://github.com/ivangonzalez/firefly-iii-mcp#readme",
+  "homepage": "https://github.com/ivangonzalezg/firefly-iii-mcp#readme",
   "funding": {
     "type": "github",
-    "url": "https://github.com/sponsors/ivangonzalez"
+    "url": "https://github.com/sponsors/ivangonzalezg"
   },
   "sideEffects": false,
   "exports": {
