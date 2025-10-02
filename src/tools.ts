@@ -836,24 +836,24 @@ export const tools: McpToolDefinition[] = [
     name: "get_chart_account_overview",
     tags: ["charts"],
     description:
-      "This endpoint returns the data required to generate a chart with basic asset account balance information. This is used on the dashboard. ",
+      "This endpoint returns the data required to generate a chart with basic asset account balance information. This is used on the dashboard.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         period: {
           type: "string",
           enum: ["1D", "1W", "1M", "3M", "6M", "1Y"],
           example: "1M",
           description:
-            "Optional period to group the data by. If not provided, it will default to '1M' or whatever is deemed relevant for the range provided. If you want to know which periods are available, see the enums or get the configuration value: `GET /api/v1/configuration/firefly.valid_view_ranges` ",
+            "Optional period to group the data by. If not provided, it will default to '1M' or whatever is deemed relevant for the range provided. If you want to know which periods are available, see the enums or get the configuration value: `GET /api/v1/configuration/firefly.valid_view_ranges`",
         },
         preselected: {
           type: "string",
@@ -907,24 +907,24 @@ export const tools: McpToolDefinition[] = [
     name: "get_chart_balance",
     tags: ["charts"],
     description:
-      "This endpoint returns the data required to generate a chart with balance information. ",
+      "This endpoint returns the data required to generate a chart with balance information.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         period: {
           type: "string",
           enum: ["1D", "1W", "1M", "3M", "6M", "1Y"],
           example: "1M",
           description:
-            "Optional period to group the data by. If not provided, it will default to '1M' or whatever is deemed relevant for the range provided. If you want to know which periods are available, see the enums or get the configuration value: `GET /api/v1/configuration/firefly.valid_view_ranges` ",
+            "Optional period to group the data by. If not provided, it will default to '1M' or whatever is deemed relevant for the range provided. If you want to know which periods are available, see the enums or get the configuration value: `GET /api/v1/configuration/firefly.valid_view_ranges`",
         },
         preselected: {
           type: "string",
@@ -941,7 +941,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "Limit the chart to these asset accounts or liabilities. Only asset accounts and liabilities will be accepted. Other types will be silently dropped. This list of accounts will be OVERRULED by the `preselected` parameter. ",
+            "Limit the chart to these asset accounts or liabilities. Only asset accounts and liabilities will be accepted. Other types will be silently dropped. This list of accounts will be OVERRULED by the `preselected` parameter.",
         },
       },
       required: ["start", "end"],
@@ -998,17 +998,17 @@ export const tools: McpToolDefinition[] = [
     name: "get_chart_budget_overview",
     tags: ["charts"],
     description:
-      "This endpoint returns the data required to generate a chart with basic budget information. ",
+      "This endpoint returns the data required to generate a chart with basic budget information.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
       },
       required: ["start", "end"],
@@ -1035,17 +1035,17 @@ export const tools: McpToolDefinition[] = [
     name: "get_chart_category_overview",
     tags: ["charts"],
     description:
-      "This endpoint returns the data required to generate a chart with basic category information. ",
+      "This endpoint returns the data required to generate a chart with basic category information.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
       },
       required: ["start", "end"],
@@ -1071,7 +1071,7 @@ export const tools: McpToolDefinition[] = [
   {
     name: "bulk_update_transactions",
     tags: ["data"],
-    description: "Allows you to update transactions in bulk. ",
+    description: "Allows you to update transactions in bulk.",
     inputSchema: {
       type: "object",
       properties: {
@@ -1097,7 +1097,7 @@ export const tools: McpToolDefinition[] = [
     name: "destroy_data",
     tags: ["data"],
     description:
-      "A call to this endpoint deletes the requested data type. Use it with care and always with user permission. The demo user is incapable of using this endpoint. ",
+      "A call to this endpoint deletes the requested data type. Use it with care and always with user permission. The demo user is incapable of using this endpoint.",
     inputSchema: {
       type: "object",
       properties: {
@@ -1169,7 +1169,7 @@ export const tools: McpToolDefinition[] = [
     name: "export_accounts",
     tags: ["data"],
     description:
-      "This endpoint allows you to export your accounts from Firefly III into a file. Currently supports CSV exports only. ",
+      "This endpoint allows you to export your accounts from Firefly III into a file. Currently supports CSV exports only.",
     inputSchema: {
       type: "object",
       properties: {
@@ -1203,7 +1203,7 @@ export const tools: McpToolDefinition[] = [
     name: "export_bills",
     tags: ["data"],
     description:
-      "This endpoint allows you to export your bills from Firefly III into a file. Currently supports CSV exports only. ",
+      "This endpoint allows you to export your bills from Firefly III into a file. Currently supports CSV exports only.",
     inputSchema: {
       type: "object",
       properties: {
@@ -1237,7 +1237,7 @@ export const tools: McpToolDefinition[] = [
     name: "export_budgets",
     tags: ["data"],
     description:
-      "This endpoint allows you to export your budgets and associated budget data from Firefly III into a file. Currently supports CSV exports only. ",
+      "This endpoint allows you to export your budgets and associated budget data from Firefly III into a file. Currently supports CSV exports only.",
     inputSchema: {
       type: "object",
       properties: {
@@ -1271,7 +1271,7 @@ export const tools: McpToolDefinition[] = [
     name: "export_categories",
     tags: ["data"],
     description:
-      "This endpoint allows you to export your categories from Firefly III into a file. Currently supports CSV exports only. ",
+      "This endpoint allows you to export your categories from Firefly III into a file. Currently supports CSV exports only.",
     inputSchema: {
       type: "object",
       properties: {
@@ -1305,7 +1305,7 @@ export const tools: McpToolDefinition[] = [
     name: "export_piggies",
     tags: ["data"],
     description:
-      "This endpoint allows you to export your piggy banks from Firefly III into a file. Currently supports CSV exports only. ",
+      "This endpoint allows you to export your piggy banks from Firefly III into a file. Currently supports CSV exports only.",
     inputSchema: {
       type: "object",
       properties: {
@@ -1339,7 +1339,7 @@ export const tools: McpToolDefinition[] = [
     name: "export_recurring",
     tags: ["data"],
     description:
-      "This endpoint allows you to export your recurring transactions from Firefly III into a file. Currently supports CSV exports only. ",
+      "This endpoint allows you to export your recurring transactions from Firefly III into a file. Currently supports CSV exports only.",
     inputSchema: {
       type: "object",
       properties: {
@@ -1373,7 +1373,7 @@ export const tools: McpToolDefinition[] = [
     name: "export_rules",
     tags: ["data"],
     description:
-      "This endpoint allows you to export your rules and rule groups from Firefly III into a file. Currently supports CSV exports only. ",
+      "This endpoint allows you to export your rules and rule groups from Firefly III into a file. Currently supports CSV exports only.",
     inputSchema: {
       type: "object",
       properties: {
@@ -1407,7 +1407,7 @@ export const tools: McpToolDefinition[] = [
     name: "export_tags",
     tags: ["data"],
     description:
-      "This endpoint allows you to export your tags from Firefly III into a file. Currently supports CSV exports only. ",
+      "This endpoint allows you to export your tags from Firefly III into a file. Currently supports CSV exports only.",
     inputSchema: {
       type: "object",
       properties: {
@@ -1441,17 +1441,17 @@ export const tools: McpToolDefinition[] = [
     name: "export_transactions",
     tags: ["data"],
     description:
-      "This endpoint allows you to export transactions from Firefly III into a file. Currently supports CSV exports only. ",
+      "This endpoint allows you to export transactions from Firefly III into a file. Currently supports CSV exports only.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         accounts: {
           type: "string",
@@ -1509,7 +1509,7 @@ export const tools: McpToolDefinition[] = [
     name: "purge_data",
     tags: ["data"],
     description:
-      "A call to this endpoint purges all previously deleted data. Use it with care and always with user permission. The demo user is incapable of using this endpoint. ",
+      "A call to this endpoint purges all previously deleted data. Use it with care and always with user permission. The demo user is incapable of using this endpoint.",
     inputSchema: {
       type: "object",
       properties: {},
@@ -1524,17 +1524,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_expense_expense",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the expenses made by the user, grouped by expense account. ",
+      "This endpoint gives a summary of the expenses made by the user, grouped by expense account.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -1544,7 +1544,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you add the accounts ID's of expense accounts, only those accounts are included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. You can combine both asset / liability and expense account ID's. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you add the accounts ID's of expense accounts, only those accounts are included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. You can combine both asset / liability and expense account ID's. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -1581,17 +1581,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_expense_asset",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the expenses made by the user, grouped by asset account. ",
+      "This endpoint gives a summary of the expenses made by the user, grouped by asset account.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -1601,7 +1601,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -1638,17 +1638,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_income_revenue",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the income received by the user, grouped by revenue account. ",
+      "This endpoint gives a summary of the income received by the user, grouped by revenue account.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -1658,7 +1658,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you add the accounts ID's of revenue accounts, only those accounts are included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. You can combine both asset / liability and deposit account ID's. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you add the accounts ID's of revenue accounts, only those accounts are included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. You can combine both asset / liability and deposit account ID's. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -1695,17 +1695,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_income_asset",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the income received by the user, grouped by asset account. ",
+      "This endpoint gives a summary of the income received by the user, grouped by asset account.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -1715,7 +1715,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -1752,17 +1752,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_transfers",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the transfers made by the user, grouped by asset account or lability. ",
+      "This endpoint gives a summary of the transfers made by the user, grouped by asset account or lability.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -1772,7 +1772,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only transfers between those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only transfers between those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -1809,17 +1809,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_expense_bill",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the expenses made by the user, grouped by (any) bill. ",
+      "This endpoint gives a summary of the expenses made by the user, grouped by (any) bill.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "bills[]": {
           type: "array",
@@ -1828,7 +1828,7 @@ export const tools: McpToolDefinition[] = [
             format: "int64",
           },
           example: [1, 2, 3],
-          description: "The bills to be included in the results. ",
+          description: "The bills to be included in the results.",
         },
         "accounts[]": {
           type: "array",
@@ -1838,7 +1838,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -1883,17 +1883,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_expense_no_bill",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the expenses made by the user, including only expenses with no bill. ",
+      "This endpoint gives a summary of the expenses made by the user, including only expenses with no bill.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -1903,7 +1903,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -1940,17 +1940,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_expense_budget",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the expenses made by the user, grouped by (any) budget. ",
+      "This endpoint gives a summary of the expenses made by the user, grouped by (any) budget.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "budgets[]": {
           type: "array",
@@ -1959,7 +1959,7 @@ export const tools: McpToolDefinition[] = [
             format: "int64",
           },
           example: [1, 2, 3],
-          description: "The budgets to be included in the results. ",
+          description: "The budgets to be included in the results.",
         },
         "accounts[]": {
           type: "array",
@@ -1969,7 +1969,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2014,17 +2014,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_expense_no_budget",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the expenses made by the user, including only expenses with no budget. ",
+      "This endpoint gives a summary of the expenses made by the user, including only expenses with no budget.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -2034,7 +2034,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2071,17 +2071,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_expense_category",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the expenses made by the user, grouped by (any) category. ",
+      "This endpoint gives a summary of the expenses made by the user, grouped by (any) category.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "categories[]": {
           type: "array",
@@ -2090,7 +2090,7 @@ export const tools: McpToolDefinition[] = [
             format: "int64",
           },
           example: [1, 2, 3],
-          description: "The categories to be included in the results. ",
+          description: "The categories to be included in the results.",
         },
         "accounts[]": {
           type: "array",
@@ -2100,7 +2100,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2145,17 +2145,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_expense_no_category",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the expenses made by the user, including only expenses with no category. ",
+      "This endpoint gives a summary of the expenses made by the user, including only expenses with no category.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -2165,7 +2165,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2202,17 +2202,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_income_category",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the income received by the user, grouped by (any) category. ",
+      "This endpoint gives a summary of the income received by the user, grouped by (any) category.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "categories[]": {
           type: "array",
@@ -2221,7 +2221,7 @@ export const tools: McpToolDefinition[] = [
             format: "int64",
           },
           example: [1, 2, 3],
-          description: "The categories to be included in the results. ",
+          description: "The categories to be included in the results.",
         },
         "accounts[]": {
           type: "array",
@@ -2231,7 +2231,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2276,17 +2276,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_income_no_category",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the income received by the user, including only income with no category. ",
+      "This endpoint gives a summary of the income received by the user, including only income with no category.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -2296,7 +2296,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2333,17 +2333,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_transfer_category",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the transfers made by the user, grouped by (any) category. ",
+      "This endpoint gives a summary of the transfers made by the user, grouped by (any) category.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "categories[]": {
           type: "array",
@@ -2352,7 +2352,7 @@ export const tools: McpToolDefinition[] = [
             format: "int64",
           },
           example: [1, 2, 3],
-          description: "The categories to be included in the results. ",
+          description: "The categories to be included in the results.",
         },
         "accounts[]": {
           type: "array",
@@ -2362,7 +2362,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only transfers between those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only transfers between those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2407,17 +2407,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_transfer_no_category",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the transfers made by the user, including only transfers with no category. ",
+      "This endpoint gives a summary of the transfers made by the user, including only transfers with no category.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -2427,7 +2427,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only transfers between those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only transfers between those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2464,17 +2464,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_expense_tag",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the expenses made by the user, grouped by (any) tag. ",
+      "This endpoint gives a summary of the expenses made by the user, grouped by (any) tag.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "tags[]": {
           type: "array",
@@ -2483,7 +2483,7 @@ export const tools: McpToolDefinition[] = [
             format: "int64",
           },
           example: [1, 2, 3],
-          description: "The tags to be included in the results. ",
+          description: "The tags to be included in the results.",
         },
         "accounts[]": {
           type: "array",
@@ -2493,7 +2493,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2538,17 +2538,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_expense_no_tag",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the expenses made by the user, including only expenses with no tag. ",
+      "This endpoint gives a summary of the expenses made by the user, including only expenses with no tag.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -2558,7 +2558,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2595,17 +2595,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_income_tag",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the income received by the user, grouped by (any) tag. ",
+      "This endpoint gives a summary of the income received by the user, grouped by (any) tag.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "tags[]": {
           type: "array",
@@ -2614,7 +2614,7 @@ export const tools: McpToolDefinition[] = [
             format: "int64",
           },
           example: [1, 2, 3],
-          description: "The tags to be included in the results. ",
+          description: "The tags to be included in the results.",
         },
         "accounts[]": {
           type: "array",
@@ -2624,7 +2624,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2669,17 +2669,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_income_no_tag",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the income received by the user, including only income with no tag. ",
+      "This endpoint gives a summary of the income received by the user, including only income with no tag.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -2689,7 +2689,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2726,17 +2726,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_transfer_tag",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the transfers created by the user, grouped by (any) tag. ",
+      "This endpoint gives a summary of the transfers created by the user, grouped by (any) tag.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "tags[]": {
           type: "array",
@@ -2745,7 +2745,7 @@ export const tools: McpToolDefinition[] = [
             format: "int64",
           },
           example: [1, 2, 3],
-          description: "The tags to be included in the results. ",
+          description: "The tags to be included in the results.",
         },
         "accounts[]": {
           type: "array",
@@ -2755,7 +2755,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only transfers between those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only transfers between those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2800,17 +2800,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_transfer_no_tag",
     tags: ["insight"],
     description:
-      "This endpoint gives a summary of the transfers made by the user, including only transfers with no tag. ",
+      "This endpoint gives a summary of the transfers made by the user, including only transfers with no tag.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -2820,7 +2820,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only transfers from those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only transfers from those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2857,17 +2857,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_expense_total",
     tags: ["insight"],
     description:
-      "This endpoint gives a sum of the total expenses made by the user. ",
+      "This endpoint gives a sum of the total expenses made by the user.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -2877,7 +2877,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only withdrawals from those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2914,17 +2914,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_income_total",
     tags: ["insight"],
     description:
-      "This endpoint gives a sum of the total income received by the user. ",
+      "This endpoint gives a sum of the total income received by the user.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -2934,7 +2934,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only deposits to those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -2971,17 +2971,17 @@ export const tools: McpToolDefinition[] = [
     name: "insight_transfer_total",
     tags: ["insight"],
     description:
-      "This endpoint gives a sum of the total amount transfers made by the user. ",
+      "This endpoint gives a sum of the total amount transfers made by the user.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         "accounts[]": {
           type: "array",
@@ -2991,7 +2991,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only transfers between those asset accounts / liabilities will be included. Other account ID's will be ignored. ",
+            "The accounts to be included in the results. If you include ID's of asset accounts or liabilities, only transfers between those asset accounts / liabilities will be included. Other account ID's will be ignored.",
         },
       },
       required: ["start", "end"],
@@ -3028,7 +3028,7 @@ export const tools: McpToolDefinition[] = [
     name: "list_transaction_by_account",
     tags: ["accounts"],
     description:
-      "This endpoint returns a list of all the transactions connected to the account. ",
+      "This endpoint returns a list of all the transactions connected to the account.",
     inputSchema: {
       type: "object",
       properties: {
@@ -3053,12 +3053,12 @@ export const tools: McpToolDefinition[] = [
         start: {
           type: "string",
           example: "2025-09-01",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         type: {
           type: "string",
@@ -3214,7 +3214,7 @@ export const tools: McpToolDefinition[] = [
     name: "list_piggy_bank_by_account",
     tags: ["accounts"],
     description:
-      "This endpoint returns a list of all the piggy banks connected to the account. ",
+      "This endpoint returns a list of all the piggy banks connected to the account.",
     inputSchema: {
       type: "object",
       properties: {
@@ -3276,7 +3276,7 @@ export const tools: McpToolDefinition[] = [
     name: "list_account",
     tags: ["accounts"],
     description:
-      "This endpoint returns a list of all the accounts owned by the authenticated user. ",
+      "This endpoint returns a list of all the accounts owned by the authenticated user.",
     inputSchema: {
       type: "object",
       properties: {
@@ -3295,7 +3295,7 @@ export const tools: McpToolDefinition[] = [
         },
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. May be omitted. ",
+          description: "A date formatted YYYY-MM-DD. May be omitted.",
         },
         end: {
           type: "string",
@@ -3305,7 +3305,7 @@ export const tools: McpToolDefinition[] = [
         date: {
           type: "string",
           description:
-            "A date formatted YYYY-MM-DD. When added to the request, Firefly III will show the account's balance on that day. ",
+            "A date formatted YYYY-MM-DD. When added to the request, Firefly III will show the account's balance on that day.",
         },
         type: {
           type: "string",
@@ -3780,13 +3780,13 @@ export const tools: McpToolDefinition[] = [
   {
     name: "get_account",
     tags: ["accounts"],
-    description: "Returns a single account by its ID. ",
+    description: "Returns a single account by its ID.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. May be omitted. ",
+          description: "A date formatted YYYY-MM-DD. May be omitted.",
         },
         end: {
           type: "string",
@@ -3801,7 +3801,7 @@ export const tools: McpToolDefinition[] = [
         date: {
           type: "string",
           description:
-            "A date formatted YYYY-MM-DD. When added to the request, Firefly III will show the account's balance on that day. ",
+            "A date formatted YYYY-MM-DD. When added to the request, Firefly III will show the account's balance on that day.",
         },
       },
       required: ["id"],
@@ -3851,7 +3851,7 @@ export const tools: McpToolDefinition[] = [
     name: "update_account",
     tags: ["accounts"],
     description:
-      "Used to update a single account. All fields that are not submitted will be cleared (set to NULL). The model will tell you which fields are mandatory. ",
+      "Used to update a single account. All fields that are not submitted will be cleared (set to NULL). The model will tell you which fields are mandatory.",
     inputSchema: {
       type: "object",
       properties: {
@@ -4160,7 +4160,7 @@ export const tools: McpToolDefinition[] = [
     name: "delete_account",
     tags: ["accounts"],
     description:
-      "Will permanently delete an account. Any associated transactions and piggy banks are ALSO deleted. Cannot be recovered from. ",
+      "Will permanently delete an account. Any associated transactions and piggy banks are ALSO deleted. Cannot be recovered from.",
     inputSchema: {
       type: "object",
       properties: {
@@ -4186,7 +4186,7 @@ export const tools: McpToolDefinition[] = [
   {
     name: "list_attachment",
     tags: ["attachments"],
-    description: "This endpoint lists all attachments. ",
+    description: "This endpoint lists all attachments.",
     inputSchema: {
       type: "object",
       properties: {
@@ -4237,7 +4237,7 @@ export const tools: McpToolDefinition[] = [
     name: "store_attachment",
     tags: ["attachments"],
     description:
-      "Creates a new attachment. The data required can be submitted as a JSON body or as a list of parameters. You cannot use this endpoint to upload the actual file data (see below). This endpoint only creates the attachment object. ",
+      "Creates a new attachment. The data required can be submitted as a JSON body or as a list of parameters. You cannot use this endpoint to upload the actual file data (see below). This endpoint only creates the attachment object.",
     inputSchema: {
       type: "object",
       properties: {
@@ -4320,7 +4320,7 @@ export const tools: McpToolDefinition[] = [
     name: "get_attachment",
     tags: ["attachments"],
     description:
-      "Get a single attachment. This endpoint only returns the available metadata for the attachment. Actual file data is handled in two other endpoints (see below). ",
+      "Get a single attachment. This endpoint only returns the available metadata for the attachment. Actual file data is handled in two other endpoints (see below).",
     inputSchema: {
       type: "object",
       properties: {
@@ -4347,7 +4347,7 @@ export const tools: McpToolDefinition[] = [
     name: "update_attachment",
     tags: ["attachments"],
     description:
-      "Update the meta data for an existing attachment. This endpoint does not allow you to upload or download data. For that, see below. ",
+      "Update the meta data for an existing attachment. This endpoint does not allow you to upload or download data. For that, see below.",
     inputSchema: {
       type: "object",
       properties: {
@@ -4406,7 +4406,7 @@ export const tools: McpToolDefinition[] = [
     name: "delete_attachment",
     tags: ["attachments"],
     description:
-      "With this endpoint you delete an attachment, including any stored file data. ",
+      "With this endpoint you delete an attachment, including any stored file data.",
     inputSchema: {
       type: "object",
       properties: {
@@ -4460,7 +4460,7 @@ export const tools: McpToolDefinition[] = [
     name: "upload_attachment",
     tags: ["attachments"],
     description:
-      "Use this endpoint to upload (and possible overwrite) the file contents of an attachment. Simply put the entire file in the body as binary data. ",
+      "Use this endpoint to upload (and possible overwrite) the file contents of an attachment. Simply put the entire file in the body as binary data.",
     inputSchema: {
       type: "object",
       properties: {
@@ -4518,12 +4518,12 @@ export const tools: McpToolDefinition[] = [
         start: {
           type: "string",
           example: "2025-09-01",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
       },
     },
@@ -4708,12 +4708,12 @@ export const tools: McpToolDefinition[] = [
         start: {
           type: "string",
           example: "2025-09-01",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         type: {
           type: "string",
@@ -4828,13 +4828,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD. If it is are added to the request, Firefly III will calculate the appropriate payment and paid dates. ",
+            "A date formatted YYYY-MM-DD. If it is are added to the request, Firefly III will calculate the appropriate payment and paid dates.",
         },
         end: {
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD. If it is added to the request, Firefly III will calculate the appropriate payment and paid dates. ",
+            "A date formatted YYYY-MM-DD. If it is added to the request, Firefly III will calculate the appropriate payment and paid dates.",
         },
       },
     },
@@ -5062,13 +5062,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD. If it is are added to the request, Firefly III will calculate the appropriate payment and paid dates. ",
+            "A date formatted YYYY-MM-DD. If it is are added to the request, Firefly III will calculate the appropriate payment and paid dates.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
           description:
-            "A date formatted YYYY-MM-DD. If it is added to the request, Firefly III will calculate the appropriate payment and paid dates. ",
+            "A date formatted YYYY-MM-DD. If it is added to the request, Firefly III will calculate the appropriate payment and paid dates.",
         },
       },
       required: ["id"],
@@ -5445,12 +5445,12 @@ export const tools: McpToolDefinition[] = [
         start: {
           type: "string",
           example: "2025-09-01",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
       },
       required: ["id"],
@@ -5981,19 +5981,19 @@ export const tools: McpToolDefinition[] = [
   {
     name: "list_budget_limit",
     tags: ["budgets"],
-    description: "Get all budget limits for for this date range. ",
+    description: "Get all budget limits for for this date range.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
           example: "2025-09-01",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
       },
       required: ["start", "end"],
@@ -6045,12 +6045,12 @@ export const tools: McpToolDefinition[] = [
         start: {
           type: "string",
           example: "2025-09-01",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         type: {
           type: "string",
@@ -6226,12 +6226,12 @@ export const tools: McpToolDefinition[] = [
         start: {
           type: "string",
           example: "2025-09-01",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
       },
     },
@@ -6298,13 +6298,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD, to get info on how much the user has spent. You must submit both start and end. ",
+            "A date formatted YYYY-MM-DD, to get info on how much the user has spent. You must submit both start and end.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
           description:
-            "A date formatted YYYY-MM-DD, to get info on how much the user has spent. You must submit both start and end. ",
+            "A date formatted YYYY-MM-DD, to get info on how much the user has spent. You must submit both start and end.",
         },
       },
     },
@@ -6508,13 +6508,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD, to get info on how much the user has spent. ",
+            "A date formatted YYYY-MM-DD, to get info on how much the user has spent.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
           description:
-            "A date formatted YYYY-MM-DD, to get info on how much the user has spent. ",
+            "A date formatted YYYY-MM-DD, to get info on how much the user has spent.",
         },
       },
       required: ["id"],
@@ -6753,14 +6753,12 @@ export const tools: McpToolDefinition[] = [
         start: {
           type: "string",
           example: "2025-09-01",
-          description:
-            "A date formatted YYYY-MM-DD, to limit the result list. ",
+          description: "A date formatted YYYY-MM-DD, to limit the result list.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
-          description:
-            "A date formatted YYYY-MM-DD, to limit the result list. ",
+          description: "A date formatted YYYY-MM-DD, to limit the result list.",
         },
         type: {
           type: "string",
@@ -7025,13 +7023,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD, to show spent and earned info. ",
+            "A date formatted YYYY-MM-DD, to show spent and earned info.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
           description:
-            "A date formatted YYYY-MM-DD, to show spent and earned info. ",
+            "A date formatted YYYY-MM-DD, to show spent and earned info.",
         },
       },
       required: ["id"],
@@ -7319,7 +7317,7 @@ export const tools: McpToolDefinition[] = [
     name: "update_currency_exchange_rate",
     tags: ["currency_exchange_rates"],
     description:
-      "Used to update a single currency exchange rate by its ID. Including the from/to currency is optional. ",
+      "Used to update a single currency exchange rate by its ID. Including the from/to currency is optional.",
     inputSchema: {
       type: "object",
       properties: {
@@ -7627,7 +7625,7 @@ export const tools: McpToolDefinition[] = [
     name: "update_currency_exchange_rate_by_date",
     tags: ["currency_exchange_rates"],
     description:
-      "Used to update a single currency exchange rate by its currency codes and date ",
+      "Used to update a single currency exchange rate by its currency codes and date",
     inputSchema: {
       type: "object",
       properties: {
@@ -7873,7 +7871,7 @@ export const tools: McpToolDefinition[] = [
     name: "list_transaction_by_link_type",
     tags: ["links"],
     description:
-      "List all transactions under this link type, both the inward and outward transactions. ",
+      "List all transactions under this link type, both the inward and outward transactions.",
     inputSchema: {
       type: "object",
       properties: {
@@ -7898,12 +7896,12 @@ export const tools: McpToolDefinition[] = [
         start: {
           type: "string",
           example: "2025-09-01",
-          description: "A date formatted YYYY-MM-DD, to limit the results. ",
+          description: "A date formatted YYYY-MM-DD, to limit the results.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
-          description: "A date formatted YYYY-MM-DD, to limit the results. ",
+          description: "A date formatted YYYY-MM-DD, to limit the results.",
         },
         type: {
           type: "string",
@@ -8004,7 +8002,7 @@ export const tools: McpToolDefinition[] = [
     name: "list_link_type",
     tags: ["links"],
     description:
-      "List all the link types the system has. These include the default ones as well as any new ones. ",
+      "List all the link types the system has. These include the default ones as well as any new ones.",
     inputSchema: {
       type: "object",
       properties: {
@@ -8107,7 +8105,7 @@ export const tools: McpToolDefinition[] = [
   {
     name: "get_link_type",
     tags: ["links"],
-    description: "Returns a single link type by its ID. ",
+    description: "Returns a single link type by its ID.",
     inputSchema: {
       type: "object",
       properties: {
@@ -8134,7 +8132,7 @@ export const tools: McpToolDefinition[] = [
     name: "update_link_type",
     tags: ["links"],
     description:
-      "Used to update a single link type. All fields that are not submitted will be cleared (set to NULL). The model will tell you which fields are mandatory. You cannot update some of the system provided link types, indicated by the editable=false flag when you list it. ",
+      "Used to update a single link type. All fields that are not submitted will be cleared (set to NULL). The model will tell you which fields are mandatory. You cannot update some of the system provided link types, indicated by the editable=false flag when you list it.",
     inputSchema: {
       type: "object",
       properties: {
@@ -8192,7 +8190,7 @@ export const tools: McpToolDefinition[] = [
     name: "delete_link_type",
     tags: ["links"],
     description:
-      "Will permanently delete a link type. The links between transactions will be removed. The transactions themselves remain. You cannot delete some of the system provided link types, indicated by the editable=false flag when you list it. ",
+      "Will permanently delete a link type. The links between transactions will be removed. The transactions themselves remain. You cannot delete some of the system provided link types, indicated by the editable=false flag when you list it.",
     inputSchema: {
       type: "object",
       properties: {
@@ -8218,7 +8216,7 @@ export const tools: McpToolDefinition[] = [
   {
     name: "list_transaction_link",
     tags: ["links"],
-    description: "List all the transaction links. ",
+    description: "List all the transaction links.",
     inputSchema: {
       type: "object",
       properties: {
@@ -8357,7 +8355,7 @@ export const tools: McpToolDefinition[] = [
   {
     name: "get_transaction_link",
     tags: ["links"],
-    description: "Returns a single link by its ID. ",
+    description: "Returns a single link by its ID.",
     inputSchema: {
       type: "object",
       properties: {
@@ -8383,7 +8381,7 @@ export const tools: McpToolDefinition[] = [
   {
     name: "update_transaction_link",
     tags: ["links"],
-    description: "Used to update a single existing link. ",
+    description: "Used to update a single existing link.",
     inputSchema: {
       type: "object",
       properties: {
@@ -8487,7 +8485,7 @@ export const tools: McpToolDefinition[] = [
   {
     name: "delete_transaction_link",
     tags: ["links"],
-    description: "Will permanently delete link. Transactions remain. ",
+    description: "Will permanently delete link. Transactions remain.",
     inputSchema: {
       type: "object",
       properties: {
@@ -8514,7 +8512,7 @@ export const tools: McpToolDefinition[] = [
     name: "list_piggy_bank_by_object_group",
     tags: ["object_groups"],
     description:
-      "This endpoint returns a list of all the piggy banks connected to the object group. ",
+      "This endpoint returns a list of all the piggy banks connected to the object group.",
     inputSchema: {
       type: "object",
       properties: {
@@ -9373,13 +9371,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD. Both the start and end date must be present. ",
+            "A date formatted YYYY-MM-DD. Both the start and end date must be present.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
           description:
-            "A date formatted YYYY-MM-DD. Both the start and end date must be present. ",
+            "A date formatted YYYY-MM-DD. Both the start and end date must be present.",
         },
         type: {
           type: "string",
@@ -9618,7 +9616,7 @@ export const tools: McpToolDefinition[] = [
                     type: "string",
                     example: "3",
                     description:
-                      "Information that defined the type of repetition. - For 'daily', this is empty. - For 'weekly', it is day of the week between 1 and 7 (Monday - Sunday). - For 'ndom', it is '1,2' or '4,5' or something else, where the first number is the week in the month, and the second number is the day in the week (between 1 and 7). '2,3' means: the 2nd Wednesday of the month - For 'monthly' it is the day of the month (1 - 31) - For yearly, it is a full date, ie '2025-09-01'. The year you use does not matter. ",
+                      "Information that defined the type of repetition. - For 'daily', this is empty. - For 'weekly', it is day of the week between 1 and 7 (Monday - Sunday). - For 'ndom', it is '1,2' or '4,5' or something else, where the first number is the week in the month, and the second number is the day in the week (between 1 and 7). '2,3' means: the 2nd Wednesday of the month - For 'monthly' it is the day of the month (1 - 31) - For yearly, it is a full date, ie '2025-09-01'. The year you use does not matter.",
                   },
                   skip: {
                     type: "integer",
@@ -9632,7 +9630,7 @@ export const tools: McpToolDefinition[] = [
                     format: "int32",
                     example: 1,
                     description:
-                      "How to respond when the recurring transaction falls in the weekend. Possible values: 1. Do nothing, just create it 2. Create no transaction. 3. Skip to the previous Friday. 4. Skip to the next Monday. ",
+                      "How to respond when the recurring transaction falls in the weekend. Possible values: 1. Do nothing, just create it 2. Create no transaction. 3. Skip to the previous Friday. 4. Skip to the next Monday.",
                   },
                 },
               },
@@ -9983,7 +9981,7 @@ export const tools: McpToolDefinition[] = [
                     type: "string",
                     example: "3",
                     description:
-                      "Information that defined the type of repetition. - For 'daily', this is empty. - For 'weekly', it is day of the week between 1 and 7 (Monday - Sunday). - For 'ndom', it is '1,2' or '4,5' or something else, where the first number is the week in the month, and the second number is the day in the week (between 1 and 7). '2,3' means: the 2nd Wednesday of the month - For 'monthly' it is the day of the month (1 - 31) - For yearly, it is a full date, ie '2025-09-01'. The year you use does not matter. ",
+                      "Information that defined the type of repetition. - For 'daily', this is empty. - For 'weekly', it is day of the week between 1 and 7 (Monday - Sunday). - For 'ndom', it is '1,2' or '4,5' or something else, where the first number is the week in the month, and the second number is the day in the week (between 1 and 7). '2,3' means: the 2nd Wednesday of the month - For 'monthly' it is the day of the month (1 - 31) - For yearly, it is a full date, ie '2025-09-01'. The year you use does not matter.",
                   },
                   skip: {
                     type: "integer",
@@ -9997,7 +9995,7 @@ export const tools: McpToolDefinition[] = [
                     format: "int32",
                     example: 1,
                     description:
-                      "How to respond when the recurring transaction falls in the weekend. Possible values: 1. Do nothing, just create it 2. Create no transaction. 3. Skip to the previous Friday. 4. Skip to the next Monday. ",
+                      "How to respond when the recurring transaction falls in the weekend. Possible values: 1. Do nothing, just create it 2. Create no transaction. 3. Skip to the previous Friday. 4. Skip to the next Monday.",
                   },
                 },
               },
@@ -10282,7 +10280,7 @@ export const tools: McpToolDefinition[] = [
     name: "trigger_recurrence_recurrence",
     tags: ["recurrences"],
     description:
-      "Trigger the creation of a transaction for a specific recurring transaction. All recurrences have a set of future occurrences. For those moments, you can trigger the creation of the transaction. That means the transaction will be created NOW, instead of on the indicated date. The transaction will be dated to _today_. So, if you recurring transaction that occurs every Monday, you can trigger the creation of a transaction for Monday in two weeks, today. On that Monday two weeks from now, no transaction will be created. Instead, the transaction is created right now, and dated _today_. ",
+      "Trigger the creation of a transaction for a specific recurring transaction. All recurrences have a set of future occurrences. For those moments, you can trigger the creation of the transaction. That means the transaction will be created NOW, instead of on the indicated date. The transaction will be dated to _today_. So, if you recurring transaction that occurs every Monday, you can trigger the creation of a transaction for Monday in two weeks, today. On that Monday two weeks from now, no transaction will be created. Instead, the transaction is created right now, and dated _today_.",
     inputSchema: {
       type: "object",
       properties: {
@@ -10294,7 +10292,7 @@ export const tools: McpToolDefinition[] = [
         date: {
           type: "string",
           description:
-            "A date formatted YYYY-MM-DD. This is the date for which you want the recurrence to fire. You can take the date from the list of occurrences in the recurring transaction. ",
+            "A date formatted YYYY-MM-DD. This is the date for which you want the recurrence to fire. You can take the date from the list of occurrences in the recurring transaction.",
         },
       },
       required: ["id", "date"],
@@ -10412,23 +10410,23 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD, to limit the transactions the test will be applied to. Both the start date and the end date must be present. ",
+            "A date formatted YYYY-MM-DD, to limit the transactions the test will be applied to. Both the start date and the end date must be present.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
           description:
-            "A date formatted YYYY-MM-DD, to limit the transactions the test will be applied to. Both the start date and the end date must be present. ",
+            "A date formatted YYYY-MM-DD, to limit the transactions the test will be applied to. Both the start date and the end date must be present.",
         },
         search_limit: {
           type: "integer",
           description:
-            "Maximum number of transactions Firefly III will try. Don't set this too high, or it will take Firefly III very long to run the test. I suggest a max of 200. ",
+            "Maximum number of transactions Firefly III will try. Don't set this too high, or it will take Firefly III very long to run the test. I suggest a max of 200.",
         },
         triggered_limit: {
           type: "integer",
           description:
-            "Maximum number of transactions the rule group can actually trigger on, before Firefly III stops. I would suggest setting this to 10 or 15. Don't go above the user's page size, because browsing to page 2 or 3 of a test result would fire the test again, making any navigation efforts very slow. ",
+            "Maximum number of transactions the rule group can actually trigger on, before Firefly III stops. I would suggest setting this to 10 or 15. Don't go above the user's page size, because browsing to page 2 or 3 of a test result would fire the test again, making any navigation efforts very slow.",
         },
         "accounts[]": {
           type: "array",
@@ -10438,7 +10436,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "Limit the testing of the rule group to these asset accounts or liabilities. Only asset accounts and liabilities will be accepted. Other types will be silently dropped. ",
+            "Limit the testing of the rule group to these asset accounts or liabilities. Only asset accounts and liabilities will be accepted. Other types will be silently dropped.",
         },
       },
       required: ["id"],
@@ -10545,13 +10543,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD, to limit the transactions the actions will be applied to. Both the start date and the end date must be present. ",
+            "A date formatted YYYY-MM-DD, to limit the transactions the actions will be applied to. Both the start date and the end date must be present.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
           description:
-            "A date formatted YYYY-MM-DD, to limit the transactions the actions will be applied to. Both the start date and the end date must be present. ",
+            "A date formatted YYYY-MM-DD, to limit the transactions the actions will be applied to. Both the start date and the end date must be present.",
         },
         "accounts[]": {
           type: "array",
@@ -10561,7 +10559,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "Limit the triggering of the rule group to these asset accounts or liabilities. Only asset accounts and liabilities will be accepted. Other types will be silently dropped. ",
+            "Limit the triggering of the rule group to these asset accounts or liabilities. Only asset accounts and liabilities will be accepted. Other types will be silently dropped.",
         },
       },
       required: ["id"],
@@ -10848,13 +10846,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD, to limit the transactions the test will be applied to. Both the start date and the end date must be present. ",
+            "A date formatted YYYY-MM-DD, to limit the transactions the test will be applied to. Both the start date and the end date must be present.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
           description:
-            "A date formatted YYYY-MM-DD, to limit the transactions the test will be applied to. Both the start date and the end date must be present. ",
+            "A date formatted YYYY-MM-DD, to limit the transactions the test will be applied to. Both the start date and the end date must be present.",
         },
         "accounts[]": {
           type: "array",
@@ -10864,7 +10862,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "Limit the testing of the rule to these asset accounts or liabilities. Only asset accounts and liabilities will be accepted. Other types will be silently dropped. ",
+            "Limit the testing of the rule to these asset accounts or liabilities. Only asset accounts and liabilities will be accepted. Other types will be silently dropped.",
         },
       },
       required: ["id"],
@@ -10929,13 +10927,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD, to limit the transactions the actions will be applied to. If the start date is not present, it will be set to one year ago. If you use this field, both the start date and the end date must be present. ",
+            "A date formatted YYYY-MM-DD, to limit the transactions the actions will be applied to. If the start date is not present, it will be set to one year ago. If you use this field, both the start date and the end date must be present.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
           description:
-            "A date formatted YYYY-MM-DD, to limit the transactions the actions will be applied to. If the end date is not present, it will be set to today. If you use this field, both the start date and the end date must be present. ",
+            "A date formatted YYYY-MM-DD, to limit the transactions the actions will be applied to. If the end date is not present, it will be set to today. If you use this field, both the start date and the end date must be present.",
         },
         "accounts[]": {
           type: "array",
@@ -10945,7 +10943,7 @@ export const tools: McpToolDefinition[] = [
           },
           example: [1, 2, 3],
           description:
-            "Limit the triggering of the rule to these asset accounts or liabilities. Only asset accounts and liabilities will be accepted. Other types will be silently dropped. ",
+            "Limit the triggering of the rule to these asset accounts or liabilities. Only asset accounts and liabilities will be accepted. Other types will be silently dropped.",
         },
       },
       required: ["id"],
@@ -11973,13 +11971,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD. This is the start date of the selected range (inclusive). ",
+            "A date formatted YYYY-MM-DD. This is the start date of the selected range (inclusive).",
         },
         end: {
           type: "string",
           example: "2025-09-30",
           description:
-            "A date formatted YYYY-MM-DD. This is the end date of the selected range (inclusive). ",
+            "A date formatted YYYY-MM-DD. This is the end date of the selected range (inclusive).",
         },
         type: {
           type: "string",
@@ -12477,7 +12475,7 @@ export const tools: McpToolDefinition[] = [
         date: {
           type: "string",
           description:
-            "A date formatted YYYY-MM-DD. When added to the request, Firefly III will show the account's balance on that day. ",
+            "A date formatted YYYY-MM-DD. When added to the request, Firefly III will show the account's balance on that day.",
         },
         type: {
           type: "string",
@@ -12942,13 +12940,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD, to limit the list of transactions. ",
+            "A date formatted YYYY-MM-DD, to limit the list of transactions.",
         },
         end: {
           type: "string",
           example: "2025-09-30",
           description:
-            "A date formatted YYYY-MM-DD, to limit the list of transactions. ",
+            "A date formatted YYYY-MM-DD, to limit the list of transactions.",
         },
         type: {
           type: "string",
@@ -13631,13 +13629,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD. This is the start date of the selected range (inclusive). ",
+            "A date formatted YYYY-MM-DD. This is the start date of the selected range (inclusive).",
         },
         end: {
           type: "string",
           example: "2025-09-30",
           description:
-            "A date formatted YYYY-MM-DD. This is the end date of the selected range (inclusive). ",
+            "A date formatted YYYY-MM-DD. This is the end date of the selected range (inclusive).",
         },
         type: {
           type: "string",
@@ -15034,7 +15032,7 @@ export const tools: McpToolDefinition[] = [
   {
     name: "get_user_group",
     tags: ["user_groups"],
-    description: "Returns a single user group by its ID. ",
+    description: "Returns a single user group by its ID.",
     inputSchema: {
       type: "object",
       properties: {
@@ -15061,7 +15059,7 @@ export const tools: McpToolDefinition[] = [
     name: "update_user_group",
     tags: ["user_groups"],
     description:
-      "Used to update a single user group. The available fields are still limited. ",
+      "Used to update a single user group. The available fields are still limited.",
     inputSchema: {
       type: "object",
       properties: {
@@ -15326,22 +15324,21 @@ export const tools: McpToolDefinition[] = [
     name: "get_basic_summary",
     tags: ["summary"],
     description:
-      "Returns basic sums of the users data, like the net worth, spent and earned amounts. It is multi-currency, and is used in Firefly III to populate the dashboard. ",
+      "Returns basic sums of the users data, like the net worth, spent and earned amounts. It is multi-currency, and is used in Firefly III to populate the dashboard.",
     inputSchema: {
       type: "object",
       properties: {
         start: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         end: {
           type: "string",
-          description: "A date formatted YYYY-MM-DD. ",
+          description: "A date formatted YYYY-MM-DD.",
         },
         currency_code: {
           type: "string",
-          description:
-            "A currency code like EUR or USD, to filter the result. ",
+          description: "A currency code like EUR or USD, to filter the result.",
         },
       },
       required: ["start", "end"],
@@ -15376,7 +15373,7 @@ export const tools: McpToolDefinition[] = [
     name: "get_about",
     tags: ["about"],
     description:
-      "Returns general system information and versions of the (supporting) software. ",
+      "Returns general system information and versions of the (supporting) software.",
     inputSchema: {
       type: "object",
       properties: {},
@@ -15390,7 +15387,7 @@ export const tools: McpToolDefinition[] = [
   {
     name: "get_current_user",
     tags: ["about"],
-    description: "Returns the currently authenticated user. ",
+    description: "Returns the currently authenticated user.",
     inputSchema: {
       type: "object",
       properties: {},
@@ -15592,7 +15589,7 @@ export const tools: McpToolDefinition[] = [
     name: "get_cron",
     tags: ["about"],
     description:
-      "Firefly III has one endpoint for its various cron related tasks. Send a GET to this endpoint to run the cron. The cron requires the CLI token to be present. The cron job will fire for all users. ",
+      "Firefly III has one endpoint for its various cron related tasks. Send a GET to this endpoint to run the cron. The cron requires the CLI token to be present. The cron job will fire for all users.",
     inputSchema: {
       type: "object",
       properties: {
@@ -15606,13 +15603,13 @@ export const tools: McpToolDefinition[] = [
           type: "string",
           example: "2025-09-01",
           description:
-            "A date formatted YYYY-MM-DD. This can be used to make the cron job pretend it's running on another day. ",
+            "A date formatted YYYY-MM-DD. This can be used to make the cron job pretend it's running on another day.",
         },
         force: {
           type: "boolean",
           example: false,
           description:
-            "Forces the cron job to fire, regardless of whether it has fired before. This may result in double transactions or weird budgets, so be careful. ",
+            "Forces the cron job to fire, regardless of whether it has fired before. This may result in double transactions or weird budgets, so be careful.",
         },
       },
       required: ["cliToken"],
@@ -16602,7 +16599,7 @@ export const tools: McpToolDefinition[] = [
     name: "store_webhook",
     tags: ["webhooks"],
     description:
-      "Creates a new webhook. The data required can be submitted as a JSON body or as a list of parameters. The webhook will be given a random secret. ",
+      "Creates a new webhook. The data required can be submitted as a JSON body or as a list of parameters. The webhook will be given a random secret.",
     inputSchema: {
       type: "object",
       properties: {
